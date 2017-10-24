@@ -10,6 +10,7 @@ class WalksController < ApplicationController
   # GET /walks/1
   # GET /walks/1.json
   def show
+    @cost = @walk.distance * 3.4
   end
 
   # GET /walks/new

@@ -8,6 +8,7 @@
       <th>Client</th>
       <th>Datetime</th>
       <th>Distance</th>
+      <th>Cost $</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -18,6 +19,7 @@
         <td><%= walk.client.name %></td>
         <td><%= walk.datetime %></td>
         <td><%= walk.distance %></td>
+        <td><%= walk.distance * 3.4 %></td>
         <td><%= link_to 'Show', walk %></td>
         <td><%= link_to 'Edit', edit_walk_path(walk) %></td>
         <td><%= link_to 'Destroy', walk, method: :delete, data: { confirm: 'Are you sure?' } %></td>
