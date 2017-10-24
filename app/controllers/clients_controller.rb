@@ -10,6 +10,7 @@ class ClientsController < ApplicationController
   # GET /clients/1
   # GET /clients/1.json
   def show
+    @dogs = Dog.all
   end
 
   # GET /clients/new

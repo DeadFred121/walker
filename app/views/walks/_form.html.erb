@@ -17,6 +17,11 @@
   </div>
 
   <div class="field">
+    <%= form.label :dog_id %>
+    <%= form.collection_select :dog_id, Dog.order(:name),:id,:name, include_blank: true %>
+  </div>
+
+  <div class="field">
     <%= form.label :datetime %>
     <%= form.datetime_select :datetime, id: :walk_datetime %>
   </div>

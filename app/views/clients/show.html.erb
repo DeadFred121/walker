@@ -11,14 +11,14 @@
 </p>
 
 <p>
-  <strong>Dog name:</strong>
-  <%= @client.dog_name %>
+  <strong>Dog name(s):</strong>
+  <% @dogs.each do |dog|%>
+    <%= dog.name %>
+    <%= AgeCalculator.new(dog.DOB).age %>
+  <% end %>
 </p>
 
-<p>
-  <strong>Dog age:</strong>
-  <%= AgeCalculator.new(@client.dog_dob).age %>
-</p>
+
 
 <%= link_to 'Edit', edit_client_path(@client) %> |
 <%= link_to 'Back', clients_path %>
